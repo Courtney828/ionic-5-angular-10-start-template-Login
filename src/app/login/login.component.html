@@ -1,0 +1,27 @@
+<ion-content padding class="label-cl green-bg acct-sct item-row" style="position:fixed">
+  <h2 class="center-col">Create An Account</h2>
+  <form #f="ngForm" (ngSubmit)="signUp(f)">
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" name="name" ngModel required></ion-input>
+    </ion-item>
+    <p style="color:red;text-align: left" *ngIf="usernameError">Invalid Username</p>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" name="email" ngModel required></ion-input>
+    </ion-item>
+    <p style="color:red;text-align: left" *ngIf="emailError">Invalid E-mail</p>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="Password" name="password" ngModel required></ion-input>
+    </ion-item>
+    <p style="color:red;text-align: left" *ngIf="passwordLengthError">Invalid Password</p>
+    <ion-item>
+      <ion-label floating>Confirm Password</ion-label>
+      <ion-input type="Password" name="confirm_password" ngModel required></ion-input>
+    </ion-item>
+    <div class="button-inline">
+      <button ion-button class="yellow-cl" [disabled]="!f.valid">Submit</button>
+    </div>
+  </form>
+</ion-content>
