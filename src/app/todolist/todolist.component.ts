@@ -10,7 +10,12 @@ import { AlertController } from 'ionic-angular';
 })
 export class TodolistComponent implements OnInit {
 
- 
+todo=[{content:"template", status:"pending",priority:"yes"},
+      {content:"casestudy", status:"done",priority:"yes"},
+      {content:"ebook", status:"todo",priority:"no"},
+      {content:"reference", status:"pending",priority:"yes"}];
+
+
 taskName: any = ""; // Entered Text
 taskList = []; // Array to store tasks
  
@@ -26,7 +31,7 @@ this.taskName = "";
 }
 
 deleteTask(index) {
-this.taskList.splice(index, 1);
+this.taskist.splice(index, 1);
 }
 
 
