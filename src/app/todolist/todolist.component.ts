@@ -10,4 +10,9 @@ import { AlertController } from 'ionic-angular';
 })
 export class TodolistComponent implements OnInit {
   
+ constructor() { }
 
+  ngOnInit() {
+  }
+
+}
