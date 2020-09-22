@@ -1,46 +1,31 @@
 <ion-header>
-	<ion-navbar>
-		<ion-title>Todo app</ion-title>
-	</ion-navbar>
+<ion-toolbar>
+<ion-title>
+ToDo App
+</ion-title>
+</ion-toolbar>
 </ion-header>
-
-<ion-content>
-	<ion-select hidden #sectionSelect (ngModel)="selecteTopic" (ionChange)="taskPriorityChange($event,selecteTopic)">
-		<ion-option value="h">High</ion-option>
-		<ion-option value="m">Medium</ion-option>
-		<ion-option value="l">Low</ion-option>
-		<ion-option value="vl">Very Low</ion-option>
-	</ion-select>
-
-
-	<ion-item>
-		<ion-input type="text" [(ngModel)]="newTask" placeholder="Enter the task"></ion-input>
-		<button ion-button large clear item-end icon-only (click)="doFilter()" [disabled]="newTask === ''">
-      <ion-icon name="color-fill">        
-      </ion-icon>
-    </button>
-		<button ion-button large clear item-end icon-only (click)="addTask()" [disabled]="newTask === ''">
-      <ion-icon name="add"></ion-icon>
-    </button>
-	</ion-item>
-	<ion-item>
-		<label><ion-icon name="text" large item-start></ion-icon>
-		Tasks</label>
-		<ion-badge item-end>{{noOfTasks}}</ion-badge>
-	</ion-item>
-
-	<ion-scroll style="width:100%;height:100vh" scrollY="true">
-		<ion-list>
-			<ion-item *ngFor="let item of items; let i = index;" class="ion-item-modified">
-				<label [ngClass]="{'completed-task':item.status}" (click)="itemSelected(i)" [ngStyle]="{'background-color':item.priority}">{{ item.content }}</label>
-				<button ion-button medium clear item-end (click)="doFilter()">
-        <ion-icon name="color-fill">        
-        </ion-icon>
-      </button>
-				<button ion-button medium clear item-end (click)="showConfirm()">
-        <ion-icon name="create"></ion-icon>
-        </button>
-			</ion-item>
-		</ion-list>
-	</ion-scroll>
+<ion-content padding>
+<ion-item>
+<ion-input type="text" placeholder="Enter task"
+[(ngModel)]="taskName"></ion-input>
+ 
+<div class="item-note" item-end>
+<ion-button color="primary" (click)="addTask()">
+<ion-icon name="add"></ion-icon>
+</ion-button>
+</div>
+</ion-item>
+<div padding>
+<ion-list>
+<ion-item *ngFor="let todo of taskList"; let i = "index">
+{{todo}}
+<div class="item-note" slot="end">
+<ion-button color="danger" clear (click)="deleteTask(i)">
+<ion-icon name="trash"></ion-icon>
+</ion-button>
+</div>
+</ion-item>
+</ion-list>
+</div>
 </ion-content>
