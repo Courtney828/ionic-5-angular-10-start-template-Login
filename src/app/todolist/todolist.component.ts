@@ -9,9 +9,5 @@ import { AlertController } from 'ionic-angular';
   styleUrls: ['./todolist.component.css']
 })
 export class TodolistComponent implements OnInit {
-   constructor() { }
+  
 
-  ngOnInit() {
-  }
-
-}
