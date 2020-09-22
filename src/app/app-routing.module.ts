@@ -5,6 +5,7 @@ import{LoginComponent} from './login/login.component';
 import{HomeComponent}from './home/home.component';
 import{RegistrationComponent} from './registration/registration.component';
 import{ForgotpasswordComponent}from './forgotpassword/forgotpassword.component';
+import { TodolistComponent } from './todolist/todolist.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,9 @@ const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'registration',component:RegistrationComponent},
   {path:'login',component:LoginComponent},
-  {path:'forgotpassword',component:ForgotpasswordComponent}
+  {path:'forgotpassword',component:ForgotpasswordComponent},
+  {path:'todolist',component:TodolistComponent}
+
   
 
 ];
