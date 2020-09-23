@@ -2,6 +2,7 @@ import { Component, OnInit ,ViewChild} from '@angular/core';
 import { List } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+import{FormsModule}from '@angular/forms';
 
 @Component({
   selector: 'app-todolist',
@@ -25,13 +26,13 @@ constructor() {}
 addTask() {
 if (this.taskName.length > 0) {
 let task = this.taskName;
-this.taskList.push(task);
+this.todo.push(task);
 this.taskName = "";
 }
 }
 
 deleteTask(index) {
-this.taskist.splice(index, 1);
+this.todo.splice(index, 1);
 }
 
 
