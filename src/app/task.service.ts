@@ -4,12 +4,12 @@ import {Task} from './task';
     providedIn: 'root'
 })
 export class TaskService {
-    _taskList: Array<Task> = [{Id:1,content:"Task1", status:"High",priority:""},
-    {Id:0,content:"template", status:"pending",priority:"high"},
-    {Id:1,content:"web app", status:"todo",priority:"low"},
-    {Id:2,content:"database", status:"done",priority:"high"},
-    {Id:3,content:"ebook", status:"penging",priority:"medium"},
-    {Id:4,content:"html", status:"done",priority:"high"}
+    _taskList: Array<Task> = [{Id:0,content:"css", status:"High",priority:"low"},
+    {Id:1,content:"template", status:"pending",priority:"high"},
+    {Id:2,content:"web app", status:"todo",priority:"low"},
+    {Id:3,content:"database", status:"done",priority:"high"},
+    {Id:4,content:"ebook", status:"penging",priority:"medium"},
+    {Id:,content:"html", status:"done",priority:"high"}
     ]
   constructor() { }
 
