@@ -32,7 +32,7 @@ this.taskName = "";
 }
 
 deleteTask(index) {
-this.todo.splice(index, 1);
+this.ta.splice(index, 1);
 }
 
 
