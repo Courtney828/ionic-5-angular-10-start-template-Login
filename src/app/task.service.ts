@@ -9,7 +9,7 @@ export class TaskService {
     {Id:1,content:"web app", status:"todo",priority:"low"},
     {Id:2,content:"database", status:"done",priority:"high"},
     {Id:3,content:"ebook", status:"penging",priority:"medium"},
-    {Id:4,content:"", status:"done",priority:"high"}
+    {Id:4,content:"html", status:"done",priority:"high"}
     ]
   constructor() { }
 
