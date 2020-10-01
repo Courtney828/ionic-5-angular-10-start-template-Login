@@ -11,9 +11,10 @@ import { HomeComponent } from './home/home.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { TodolistComponent } from './todolist/todolist.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, RegistrationComponent, ForgotpasswordComponent, TodolistComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, RegistrationComponent, ForgotpasswordComponent, TodolistComponent, CategoryComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule],
   providers: [
