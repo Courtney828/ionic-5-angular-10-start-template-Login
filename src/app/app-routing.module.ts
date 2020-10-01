@@ -7,7 +7,7 @@ import{RegistrationComponent} from './registration/registration.component';
 import{ForgotpasswordComponent}from './forgotpassword/forgotpassword.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import {CategoryComponent}from './category/category.component';
-import{MultiplechoiceComponent}from '/.multiplechoice/multiplechoice.component';
+
 
 
 const routes: Routes = [
@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'forgotpassword',component:ForgotpasswordComponent},
   {path:'todolist',component:TodolistComponent},
   {path :'category',component:CategoryComponent },
-  {path:'multiplechoice',component:MultiplechoiceComponent}
+  
 
   
 
